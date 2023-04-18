@@ -5,9 +5,9 @@ public class Task7 {
         int[][] matrix = {
                 {2, 6, 8},
                 {9, 18, 7},
-                {4, 2, 22}
+                {4, 22, 22}
         };
-        int maxSum = Integer.MIN_VALUE;
+        int maxSum = 0;
 
         for (int i = 0; i < matrix[0].length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {

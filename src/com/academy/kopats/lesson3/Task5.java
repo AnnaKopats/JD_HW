@@ -4,32 +4,32 @@ import java.util.Arrays;
 
 public class Task5 {
     public static void main(String[] args) {
-//        maxValue();
-//     minValue(array[i]);
-//       int[] myArr = Arrays.copyOf(maxValue(ar))
-//        System.out.println(Arrays.toString(array)
+        maxValue();
+//   minValue();
     }
 
-    public static void maxValue() {
+    public static int maxValue() {
         int[] array = {20, 4, 2, 12, 7, 25, 500, 9};
         int max = array[0];
-        for (int i = 1; i < array.length; i++) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
             if (array[i] > max) {
                 max = array[i];
             }
         }
-        System.out.println("Максимальный элемент равен: " + max);
-
+        System.out.println("\nМаксимальный элемент равен: " + max);
+        return 0;
     }
 
     public static void minValue() {
         int[] array = {20, 4, 2, 12, 7, 25, 500, 9};
         int min = array[0];
-        for (int i = 1; i < array.length; i++) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
             if (array[i] < min) {
                 min = array[i];
             }
         }
-        System.out.println("Минимальный элемент равен: " + min);
+        System.out.println("\nМинимальный элемент равен: " + min);
     }
 }

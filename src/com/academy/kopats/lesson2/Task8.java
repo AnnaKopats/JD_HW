@@ -9,6 +9,6 @@ public class Task8 {
         System.out.println("Введите вещественное число с количеством порядков после запятой не менее 5:");
         Scanner scanner = new Scanner(System.in);
         double number = scanner.nextDouble();
-        System.out.format("%.3f",number);
+        System.out.format("%.3f", number);
     }
 }

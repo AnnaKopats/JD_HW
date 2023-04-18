@@ -7,7 +7,7 @@ public class Task8 {
         Scanner scanner = new Scanner(System.in);
         int i = scanner.nextInt();
 //        int[] vec = new int[];
- //       int[] matrix = new int[][];
+//        int[][] matrix = new int[][];
 
     }
 

@@ -9,15 +9,15 @@ public class Task2 {
         int num1 = scanner.nextInt();
         int num2 = scanner.nextInt();
         int gcd = 1;
-        int maxGcd=0;
+        int maxGcd = 0;
         for (int i = 1; i <= num1 && i <= num2; i++) {
             if (num1 % i == 0 && num2 % i == 0) {
                 gcd = i;
-                if (gcd>maxGcd){
-                    maxGcd=gcd;
+                if (gcd > maxGcd) {
+                    maxGcd = gcd;
                 }
             }
         }
-        System.out.println(maxGcd);
+        System.out.println("НОД " + num1 + " и " + num2 + " " + "равен: " + maxGcd);
     }
 }

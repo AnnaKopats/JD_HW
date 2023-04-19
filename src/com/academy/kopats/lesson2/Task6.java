@@ -7,6 +7,10 @@ public class Task6 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите первый коэффициент квадратного уравнения отличный от нуля:");
         double a = scanner.nextInt();
+        if (a == 0) {
+            System.out.println("Вы ввели некорректные данные");
+            return;
+        }
         System.out.println("Введите второй коэффициент квадратного уравнения:");
         double b = scanner.nextInt();
         System.out.println("Введите третий коэффициент квадратного уравнения:");

@@ -5,10 +5,10 @@ import java.util.Arrays;
 public class Task5 {
     public static void main(String[] args) {
         maxValue();
-//   minValue();
+        minValue();
     }
 
-    public static int maxValue() {
+    public static void maxValue() {
         int[] array = {20, 4, 2, 12, 7, 25, 500, 9};
         int max = array[0];
         for (int i = 0; i < array.length; i++) {
@@ -18,7 +18,6 @@ public class Task5 {
             }
         }
         System.out.println("\nМаксимальный элемент равен: " + max);
-        return 0;
     }
 
     public static void minValue() {

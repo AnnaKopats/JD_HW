@@ -8,7 +8,6 @@ public class Task7 {
                 {4, 22, 22}
         };
         int maxSum = 0;
-
         for (int i = 0; i < matrix[0].length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
                 System.out.print(matrix[i][j] + " ");

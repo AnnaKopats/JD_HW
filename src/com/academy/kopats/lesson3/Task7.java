@@ -7,7 +7,7 @@ public class Task7 {
                 {9, 18, 7},
                 {4, 22, 22}
         };
-        int maxSum = 0;
+        int maxSum = 0; //инициализация матрицы и получение результата должно быть в методе main() но получение индекса строки нужно сделать в отдельном методе
         for (int i = 0; i < matrix[0].length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
                 System.out.print(matrix[i][j] + " ");

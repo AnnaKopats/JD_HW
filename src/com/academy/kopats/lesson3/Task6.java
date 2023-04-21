@@ -4,9 +4,9 @@ import java.util.Arrays;
 
 public class Task6 {
     public static void main(String[] args) {
-        int[] a = new int[numArray()];
+        int[] a = new int[numArray()]; // т.к метод numArray() возвращает 0, то и массив проинициализируется нулевой длины
         for (int number : a) {
-            System.out.println(a);
+            System.out.println(a); // данная строка не выведет на экран массив
         }
     }
 
@@ -15,7 +15,7 @@ public class Task6 {
         for (int i : number) {
             System.out.println(i);
         }
-        return 0;
+        return 0; //почему 0???
     }
 }
 

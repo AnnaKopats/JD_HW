@@ -9,9 +9,10 @@ public class Task1 {
         int num1 = scanner.nextInt();
         System.out.println("Введите второе число:");
         int num2 = scanner.nextInt();
-        System.out.println("Сумма двух чисел в десятичном формате равна: " + num1 + num2);
-        System.out.println("Сумма двух чисел в двоичном формате равна: " + Integer.toBinaryString(num1 + num2));
-        System.out.println("Сумма двух чисел в восьмеричном формате равна: " + Integer.toOctalString(num1 + num2));
-        System.out.println("Сумма двух чисел в шестнадцатеричном формате равна: " + Integer.toHexString(num1 + num2));
+        int sum = num1+num2;
+        System.out.println("Сумма двух чисел в десятичном формате равна: " + sum);
+        System.out.println("Сумма двух чисел в двоичном формате равна: " + Integer.toBinaryString(sum));
+        System.out.println("Сумма двух чисел в восьмеричном формате равна: " + Integer.toOctalString(sum));
+        System.out.println("Сумма двух чисел в шестнадцатеричном формате равна: " + Integer.toHexString(sum));
     }
 }

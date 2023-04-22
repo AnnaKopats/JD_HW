@@ -36,12 +36,12 @@ public class Task1 {
         double y = 0;
 
         System.out.println(" ------------------------------");
-        System.out.println("|     a    |         y        |");
+        System.out.println("|     a    |     x    |         y        |");
         for (a = -5; a <= 12; a = a + 3.75) {
             y = Math.exp(a * x) - 3.45 * a;
             System.out.println(" ------------------------------");
 
-            System.out.print("|  " + a + "   |" + y + "|\n");
+            System.out.print("|  " + a + "   |" + "|  " + x + "   |" + y + "|\n");
         }
         System.out.println(" ------------------------------");
         System.out.println();

@@ -5,44 +5,50 @@ import java.util.Scanner;
 
 public class Task4 {
     public static void main(String[] args) {
-        number();
-        numArray();
-        numArray2();
-
+        System.out.println("Введите числа через пробел");
+        int[] array = new int[6];
+        numberArr(Arrays.toString(array));               //вызов Task 4.1
+        System.out.println();
+        int[] array2 = {3, 49, 5, 99, 7, 500, 1, 0, 8};
+        numArray(array2);                                  //вызов Task 4.2
+        System.out.println();
+        numArray2(array2);                                     //вызов Task 4.3
+        System.out.println();
+        System.out.println(Arrays.toString(numArray(array2))); //вызов Task 6
     }
 
-    public static void number() {
-        System.out.println("Введите 7 элементов через пробел");
-        int[] array = new int[7];
+    //   Task 4.1
+    public static String numberArr(String a) {
         Scanner scanner = new Scanner(System.in);
-        String string = scanner.nextLine();
-        String trim = string.trim();
-        String[] split = string.split(" ");
-        int i;
-        for (i = 0; i < split.length; i++) {
+        a = scanner.nextLine();
+        String trim = a.trim();
+        String[] split = a.split(" ");
+        int[] array = new int[split.length];
+        for (int i = 0; i < split.length; i++) {
             array[i] = Integer.valueOf(split[i]);
         }
         for (int number : array) {
-            System.out.println(number);
+            System.out.print(number + " ");
         }
+        return a;
     }
 
     //Task 4.2
-    public static void numArray() {
-        int[] number = {3, 50, 7, 48, 7, 2, 11, 49};
-        for (int i : number) {
-            System.out.println(i);
+    public static int[] numArray(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
         }
+        return arr;
     }
 
     //Task 4.3
-    public static void numArray2() {
-        int[] number = {3, 50, 7, 0, 7, 2, 11, 49};
-        for (int i : number) {
+    public static int[] numArray2(int[] arr) {
+        for (int i : arr) {
             if (i % 7 == 0)
                 continue;
             System.out.print(i + " ");
         }
+        return arr;
     }
 }
 

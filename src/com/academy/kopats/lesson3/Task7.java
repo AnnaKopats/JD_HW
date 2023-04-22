@@ -7,14 +7,18 @@ public class Task7 {
                 {9, 18, 7},
                 {4, 22, 22}
         };
-        int maxSum = 0;
         for (int i = 0; i < matrix[0].length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
                 System.out.print(matrix[i][j] + " ");
             }
             System.out.println();
         }
+        maxSumEl(matrix);
+    }
+
+    public static int maxSumEl(int[][] matrix) {
         int index = 0;
+        int maxSum = 0;
         for (int i = 0; i < matrix.length; i++) {
             int countSum = 0;
             for (int j = 0; j < matrix[i].length; j++) {
@@ -26,5 +30,6 @@ public class Task7 {
             }
         }
         System.out.print("Индекс строки с максимальной суммой элементов: " + index);
+        return index;
     }
 }

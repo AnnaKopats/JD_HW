@@ -8,12 +8,13 @@ public class Task1 {
         functionTab();
     }
 
-    //Контрольное задание 1
+    //Контрольное задание 1/1
     public static double arithmetic(double x, double a) {
         double z = Math.pow((Math.pow(x, 2) + Math.PI / 6), 5) - x * Math.sqrt(Math.pow(a, 3)) - Math.log(Math.abs((a - 1.12 * x) / 4));
         return z;
     }
 
+    //Контрольное задание 1/2
     public static double arithmeticPart(double x, double a) {
         double cos = Math.pow((Math.pow(x, 2) + Math.PI / 6), 5);
         double sqrt = x * Math.sqrt(Math.pow(a, 3));
@@ -28,6 +29,7 @@ public class Task1 {
         return y;
     }
 
+    //Контрольное задание 3
     public static void functionTab() {
         double a = 3.75;
         double x = 12.1;

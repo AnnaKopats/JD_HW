@@ -6,31 +6,37 @@ import java.util.Scanner;
 public class Task4 {
     public static void main(String[] args) {
         System.out.println("Введите числа через пробел");
-        int[] array = new int[6];
-        numberArr(Arrays.toString(array));               //вызов Task 4.1
+        int[] array = numberArr();
+        printArray(array);               //вызов Task 4.1
         System.out.println();
+
         int[] array2 = {3, 49, 5, 99, 7, 500, 1, 0, 8};
-        numArray(array2);                                  //вызов Task 4.2
-        System.out.println();
-        numArray2(array2);                                     //вызов Task 4.3
-        System.out.println();
-        System.out.println(Arrays.toString(numArray(array2))); //вызов Task 6
+        numArray(array2);                //вызов Task 4.2
+        System.out.println("\n");
+
+
+        numArray2(array2);              //вызов Task 4.3
+        System.out.println("\n");
+
+        printArray(array2);;              //вызов Task 6
     }
 
     //   Task 4.1
-    public static String numberArr(String a) {
+    public static int[] numberArr() {
         Scanner scanner = new Scanner(System.in);
-        a = scanner.nextLine();
-        String trim = a.trim();
-        String[] split = a.split(" ");
+        String a = scanner.nextLine();
+        String[] split = a.trim().split(" ");
         int[] array = new int[split.length];
         for (int i = 0; i < split.length; i++) {
-            array[i] = Integer.valueOf(split[i]);
+            array[i] = Integer.parseInt(split[i]);
         }
-        for (int number : array) {
-            System.out.print(number + " ");
+        return array;
+    }
+
+    public static void printArray(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
         }
-        return a;
     }
 
     //Task 4.2

@@ -8,7 +8,7 @@ public class Task3 {
         Scanner scanner = new Scanner(System.in);
         int a = scanner.nextInt();
      for (int i = 0; i < a; i++) {
-         System.out.print(fibonacci(i)+ "");
+         System.out.print(fibonacci(i)+ ""); // а смысл добавлять пустой символ? уж тогда пробел, что бы видно было числа
      }
 
     }

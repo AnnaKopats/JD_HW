@@ -11,7 +11,7 @@ public class Task2 {
         System.out.print("Наибольший общий делитель этих чисел равен: " + MaxDivisor(a, b));
     }
 
-    public static int MaxDivisor(int n, int m) {
+    public static int MaxDivisor(int n, int m) { //конвеншн именования методов. кэмел-кейс с маленькой(!) буквы
         if (n == m) return n;
         else if (n > m) return MaxDivisor(n - m, m);
         else

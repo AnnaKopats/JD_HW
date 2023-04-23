@@ -10,7 +10,7 @@ public class Task1 {
 
     //Контрольное задание 1/1
     public static double arithmetic(double x, double a) {
-        double z = Math.pow((Math.pow(x, 2) + Math.PI / 6), 5) - x * Math.sqrt(Math.pow(a, 3)) - Math.log(Math.abs((a - 1.12 * x) / 4));
+        double z = Math.pow((Math.pow(x, 2) + Math.PI / 6), 5) - x * Math.sqrt(Math.pow(a, 3)) - Math.log(Math.abs((a - 1.12 * x) / 4)); //там косинус еще был
         return z;
     }
 

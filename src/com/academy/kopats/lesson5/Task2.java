@@ -25,4 +25,5 @@ public class Task2 {
         temp.divide(number);
         System.out.println(f1Str + " / " + number + " = " + temp.printFraction());
     }
+
 }

@@ -30,6 +30,5 @@ public class Task3 {
         int course = scanner.nextInt();
         System.out.println("Список студентов " + course + " курса:");
         studentLists.getCourse(student, course);
-
     }
 }

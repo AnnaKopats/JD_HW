@@ -23,4 +23,5 @@ public class MainClassNew {
     public void setB(char b) {
         this.b = b;
     }
+
 }

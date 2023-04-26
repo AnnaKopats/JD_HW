@@ -7,5 +7,4 @@ public class Task1 {
         test.setB('y');
         System.out.println(test.getA() + " " + test.getB());
     }
-
 }

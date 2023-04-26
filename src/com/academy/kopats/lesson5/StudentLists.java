@@ -21,7 +21,6 @@ public class StudentLists {
             if (students[i].getYearBirth() > year) {
                 System.out.println(students[i].getFullName() + " " + students[i].getYearBirth() + " г.р.");
             }
-            ;
         }
     }
 }

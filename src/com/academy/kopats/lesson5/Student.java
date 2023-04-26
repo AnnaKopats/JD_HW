@@ -79,6 +79,4 @@ public class Student {
     public void setYearBirth(int yearBirth) {
         this.yearBirth = yearBirth;
     }
-
-
 }

@@ -14,7 +14,7 @@ public class Task3 {
         Student student8 = new Student(103185, "Гертель Ирина Николаевна", "Экономический", 5, "Э-10", 1999);
         Student student9 = new Student(155478, "Осипова Елена Григорьевна", "Информатика", 1, "IT-19", 2006);
         Student student10 = new Student(133644, "Коробов Михаил Альбертович", "Информатика", 4, "М-12", 2000);
-        Student[] student = {student1,student2,student3,student4,student5,student6,student7,student8,student9,student10};
+        Student[] student = {student1, student2, student3, student4, student5, student6, student7, student8, student9, student10};
 
         student5.studentHello();
 

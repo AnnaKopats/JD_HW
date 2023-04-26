@@ -68,5 +68,6 @@ public class Fraction {
     public String printFraction() {
         return numerator + "/" + denominator;
     }
+
 }
 

@@ -18,7 +18,7 @@ public class Student {
         this.id = id;
         this.fullName = fullName;
         this.faculty = faculty;
-        this.course = course;
+        this.course = course; // а если в конструктор передам 10-ый курс?
         this.group = group;
         this.yearBirth = yearBirth;
     }

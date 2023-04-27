@@ -43,16 +43,16 @@ public class Fraction {
         this.denominator = f.denominator;
     }
 
-    private void add(int numerator, int denominator) {
+    private void add(int numerator, int denominator) { //зачем этот приватный метод?
         this.numerator = this.numerator * denominator + numerator * this.denominator;
         this.denominator *= denominator;
     }
 
-    public void add(Fraction f) {
+    public void add(Fraction f) { //задание: и возвращающий дробь (объект того же класса)
         add(f.numerator, f.denominator);
     }
 
-    public void divide(int numerator) {
+    public void divide(int numerator) { //задание: и возвращающий дробь (объект того же класса)
         if (numerator == 0) {
             System.out.println("Ошибка! Знаменатель не может быть равен 0!");
         } else {
@@ -60,7 +60,7 @@ public class Fraction {
         }
     }
 
-    public void multiply(int numerator) {
+    public void multiply(int numerator) { //задание: и возвращающий дробь (объект того же класса)
         this.numerator = this.numerator * numerator;
     }
 

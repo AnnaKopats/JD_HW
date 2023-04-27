@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Task3 {
     public static void main(String[] args) {
-        Student student1 = new Student(102261, "Миронов Андрей Иванович", "Информатика", 5, "IT-12", 2004);
+        Student student1 = new Student(102261, "Миронов Андрей Иванович", "Информатика", 10, "IT-12", 2004); //10-ый курс без проблем инициализируется
         Student student2 = new Student(151126, "Самонтов Кирилл Алексеевич", "Математика", 3, "М-23", 2002);
         Student student3 = new Student(132698, "Ярош Ангелина Андреевна", "Филологический", 1, "ФИЛ-11", 2005);
         Student student4 = new Student(101233, "Яковлева Елена Ивановна", "Экономический", 5, "Э-22", 2000);

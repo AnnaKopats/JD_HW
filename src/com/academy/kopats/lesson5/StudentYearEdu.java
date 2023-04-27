@@ -1,6 +1,6 @@
 package com.academy.kopats.lesson5;
 
-public class StudentYearEdu extends Student {
+public class StudentYearEdu extends Student { // мы на 5-ой лекции еще не проходили наследование. да и поля такого в задании нет
     private int yearEducation;
 
     public int getYearEducation() {

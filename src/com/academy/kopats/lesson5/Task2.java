@@ -10,20 +10,14 @@ public class Task2 {
         System.out.println("Первая дробь " + f1Str);
         String f2Str = fr2.printFraction();
         System.out.println("Вторая дробь " + f2Str);
-        Fraction temp = new Fraction(fr1);
 
-        temp.add(fr2);
-        System.out.println(f1Str + " + " + f2Str + " = " + temp.printFraction());
-        temp.setValue(fr1);
+        System.out.println(f1Str + " + " + f2Str + " = " + fr1.add(fr2).printFraction());
 
         int number = 2;
 
-        temp.multiply(number);
-        System.out.println(f1Str + " * " + number + " = " + temp.printFraction());
-        temp.setValue(fr1);
+        System.out.println(f1Str + " * " + number + " = " + fr1.multiply(number).printFraction());
 
-        temp.divide(number);
-        System.out.println(f1Str + " / " + number + " = " + temp.printFraction());
+        System.out.println(f1Str + " / " + number + " = " + fr1.divide(number).printFraction());
     }
 
 }

@@ -18,7 +18,9 @@ public class Student {
         this.id = id;
         this.fullName = fullName;
         this.faculty = faculty;
-        this.course = course;
+        if (course < 1 || course > 5) {
+            System.out.println("Нет такого курса");
+        } else{ this.course = course;}
         this.group = group;
         this.yearBirth = yearBirth;
     }
@@ -57,7 +59,7 @@ public class Student {
     }
 
     public void setCourse(int course) {
-        if (course <= 1 || course >= 5) {
+        if (course < 1 || course > 5) {
             System.out.println("Нет такого курса");
         } else {
             this.course = course;

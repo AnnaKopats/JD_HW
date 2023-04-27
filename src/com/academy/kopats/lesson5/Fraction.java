@@ -6,7 +6,8 @@ public class Fraction {
 
 
     public Fraction(Fraction f) {
-        setValue(f);
+        this.numerator = f.numerator;
+        this.denominator = f.denominator;
     }
 
 
@@ -38,30 +39,20 @@ public class Fraction {
         this.denominator = denominator;
     }
 
-    public void setValue(Fraction f) {
-        this.numerator = f.numerator;
-        this.denominator = f.denominator;
+
+    public Fraction add(Fraction f) {
+        return new Fraction((this.numerator * f.denominator + f.numerator * this.denominator), this.denominator * f.denominator);
     }
 
-    private void add(int numerator, int denominator) {
-        this.numerator = this.numerator * denominator + numerator * this.denominator;
-        this.denominator *= denominator;
-    }
-
-    public void add(Fraction f) {
-        add(f.numerator, f.denominator);
-    }
-
-    public void divide(int numerator) {
+    public Fraction divide(int numerator) {
         if (numerator == 0) {
             System.out.println("Ошибка! Знаменатель не может быть равен 0!");
-        } else {
-            this.denominator = this.denominator * numerator;
         }
+        return new Fraction(this.numerator * 1, this.denominator * numerator);
     }
 
-    public void multiply(int numerator) {
-        this.numerator = this.numerator * numerator;
+    public Fraction multiply(int numerator) {
+        return new Fraction(this.numerator * numerator, denominator * 1);
     }
 
 

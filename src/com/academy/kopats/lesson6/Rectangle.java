@@ -3,10 +3,21 @@ package com.academy.kopats.lesson6;
 public class Rectangle implements Shape {
     private double a;
     private double b;
+    private String name;
 
-    public Rectangle(double a, double b) {
+    public Rectangle(double a, double b, String name) {
         this.a = a;
         this.b = b;
+        this.name = name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 
     @Override

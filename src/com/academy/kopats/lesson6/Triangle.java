@@ -4,16 +4,26 @@ public class Triangle implements Shape {
     private double a;
     private double b;
     private double c;
+    private String name;
 
-    public Triangle(double a, double b, double c) {
+    public Triangle(double a, double b, double c, String name) {
         this.a = a;
         this.b = b;
         this.c = c;
+        this.name = name;
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+    public void setName(String name){
+        this.name = name;
     }
 
     @Override
     public double getArea() {
-        return Math.sqrt(getPerimeter() / 2 * (getPerimeter() / 2 - a) * (getPerimeter() / 2 - b) * (getPerimeter() / 2 - c)); //формула Герона
+        return (a * b) / 2;
     }
 
     @Override

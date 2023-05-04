@@ -9,7 +9,7 @@ public class ShapeParameterPrinter {
         System.out.println("Периметр круга равен: " + circle.getPerimeter());
     }
 
-    public void circlePerimeterArea(Circle circle) {
+    public void circlePerimeterArea(Circle circle) { // это что за ужас? :)))) а если число фигур будет расти, так и будем копипастить методы??? Интерфейс Shape должен решить эту проблему! должно быть всего лишь 3 метода в этом классе!
         System.out.println("Периметр круга равен: " + circle.getPerimeter() + " Площадь круга равна: " + circle.getArea());
     }
 

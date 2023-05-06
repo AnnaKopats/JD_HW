@@ -22,9 +22,18 @@ public class Document implements Printable, Cloneable, Comparable<Document> {
     public Object clone() throws CloneNotSupportedException {
         return super.clone();
     }
+    @Override
+    public int hashCode(){
+        int prime = 31;
+        int result = 1;
+        result = prime * result + numberPages;
+        result = result * prime + ((nameDoc == null) ? 0 : nameDoc.hashCode());
+        return result;
+    }
 
     @Override
     public boolean equals(Object o) {
+        if (o == null) return false;
         if (this == o) {
             return true;
         }

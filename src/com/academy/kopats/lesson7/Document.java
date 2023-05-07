@@ -14,16 +14,12 @@ public class Document implements Printable, Cloneable, Comparable<Document> {
 
 
     @Override
-    public void print() {
-        System.out.println("Документ отпрвлен на печать.");
-    }
-
-    @Override
     public Object clone() throws CloneNotSupportedException {
         return super.clone();
     }
+
     @Override
-    public int hashCode(){
+    public int hashCode() {
         int prime = 31;
         int result = 1;
         result = prime * result + numberPages;
@@ -40,8 +36,8 @@ public class Document implements Printable, Cloneable, Comparable<Document> {
         Document d;
         if (!(o instanceof Document)) {
             return false;
-        }else {
-            d= (Document) o;
+        } else {
+            d = (Document) o;
         }
         return this.numberPages == d.numberPages && Objects.equals(this.nameDoc, d.nameDoc);
     }

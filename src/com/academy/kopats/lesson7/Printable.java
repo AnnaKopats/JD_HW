@@ -1,6 +1,8 @@
 package com.academy.kopats.lesson7;
 
 public interface Printable {
-    void print();
+    default void print(){
+        System.out.println("Документ отпрвлен на печать.");
+    }
     String getNameDoc();
 }

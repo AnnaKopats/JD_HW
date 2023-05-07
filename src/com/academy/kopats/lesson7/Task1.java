@@ -26,5 +26,7 @@ public class Task1 {
         Printable printDoc;
         printDoc = (Printable) contract3;
         printDoc.print();
+
+
     }
 }

@@ -1,26 +1,12 @@
 package com.academy.kopats.lesson3;
 
+import java.util.Arrays;
+
 public class Task9 {
     public static void main(String[] args) {
-
-        for (int i = 0; i <= 9; i++) {
-            System.out.print(i);
-            if (i == 9) {
-                for (i = 0; i <= 9; i++) {
-                    System.out.print(i + "" + i);
-                    if (i == 9) {
-                        for (i = 0; i <= 9; i++) {
-                            System.out.print(i + "" + i + "" + i);
-                            if (i == 9) {
-                                for (i = 0; i <= 9; i++) {
-                                    System.out.print(i + "" + i + "" + i + "" + i);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+        String s = "0123456789";
+        for (int i = 0; i <=4; i++) {
+            System.out.print(s.replaceAll("(.)", "$1".repeat(i)));
         }
-
     }
 }

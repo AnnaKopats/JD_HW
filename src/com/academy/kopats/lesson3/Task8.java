@@ -27,7 +27,6 @@ public class Task8 {
         } else
             System.out.println("Некорректные данные");
         System.out.println();
-
     }
 
     public static int[] pow(int[] a, int[][] b) {

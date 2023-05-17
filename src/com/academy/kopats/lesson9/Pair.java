@@ -1,6 +1,6 @@
 package com.academy.kopats.lesson9;
 
-public class Pair<T> {
+public class Pair<T> { //значения должны быть параметризованы разными типами. Pair<U, V>
     private T value1, value2;
 
     public Pair(T value1, T value2) {

@@ -1,7 +1,7 @@
 package com.academy.kopats.lesson9;
 
-public class ClassNum {
-    private Integer value;
+public class ClassNum {//параметризовать надо весь класс
+    private Integer value;  //тут хранить не Integer а переменную того типа, которая будет передана в конструктор
 
     <T extends Number> ClassNum(T val) {
         value = val.intValue();

@@ -1,24 +1,25 @@
 package com.academy.kopats.lesson9;
 
-public class ClassNum {
-    private Integer value;
+public class ClassNum <T> {
+    private T value;
 
-    <T extends Number> ClassNum(T val) {
-        value = val.intValue();
+    public <U extends Number> ClassNum(T value) {
+        this.value = value;
     }
 
-    public <T extends Number> boolean strEquals(T val) {
-        int s1 = Integer.toString(value).length();
+    public <U extends Number> boolean strEquals(T val) {
+        int s1 = value.toString().length();
         int s2 = val.toString().length();
         return s1 == s2;
     }
 
-
-    public double getValue() {
+    public T getValue() {
         return value;
     }
 
-    public void setValue(int val) {
-        this.value = val;
+    public void setValue(T value) {
+        this.value = value;
     }
 }
+
+

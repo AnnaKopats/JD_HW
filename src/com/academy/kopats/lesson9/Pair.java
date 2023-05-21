@@ -1,31 +1,45 @@
 package com.academy.kopats.lesson9;
 
-public class Pair<T> {
-    private T value1, value2;
+public class Pair<T, U> {
+    private T value1;
+    private U value2;
 
-    public Pair(T value1, T value2) {
+    public Pair(T value1, U value2) {
         this.value1 = value1;
         this.value2 = value2;
     }
-    public void first(){
+
+    @Override
+    public String toString() {
+        return "Первый элемент: " +
+                value1 +
+                ", второй элемент: " + value2;
+    }
+
+    public void first() {
         System.out.println("Первый элемент: " + getValue1());
     }
-    public void last(){
+
+    public void last() {
         System.out.println("Второй элемент: " + getValue2());
     }
-    public void swap(){
-        T value3 = value1;
-        value1 = value2;
-        value2 = value3;
-        System.out.println("Первый элемент: " + value1 + ". Второй элемент: " + value2);
+
+    public Pair<U, T> swap() {
+        return new Pair<>(value2, value1);
     }
-    public void replaceFirst(T value1){
+
+    public void replaceFirst(T value1) {
         setValue1(value1);
         System.out.println("Первый элемент заменен на: " + getValue1());
     }
-    public void replaceLast(T value2){
+
+    public void replaceLast(U value2) {
         setValue2(value2);
         System.out.println("Второй элемент заменен на: " + getValue2());
+    }
+
+    public static <T, U> Pair<U, T> newPair(Pair<T, U> element) {
+        return new Pair<>(element.value2, element.value1);
     }
 
     public T getValue1() {
@@ -36,11 +50,11 @@ public class Pair<T> {
         this.value1 = value1;
     }
 
-    public T getValue2() {
+    public U getValue2() {
         return value2;
     }
 
-    public void setValue2(T value2) {
+    public void setValue2(U value2) {
         this.value2 = value2;
     }
 }

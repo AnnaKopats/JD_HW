@@ -21,6 +21,8 @@ public class Task2 {
             System.out.println(next.getKey() + " - " + next.getValue());
         }
 
+        notepad.addNote("15-05-2023", "Воробей", notepad1); //я добавил дубликат, но исключение не возникло
+
        System.out.println(notepad.getNote("13-05-2023", notepad1));
 
         System.out.println(notepad.getAllNotes(notepad1));

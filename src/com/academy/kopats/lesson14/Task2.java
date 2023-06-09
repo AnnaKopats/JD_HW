@@ -50,7 +50,7 @@ public class Task2 {
                     arr.add(i);
                 }
                 Collections.sort(arr);
-                dos.write(arr.toString().getBytes());
+                dos.write(arr.toString().getBytes()); //файл out.txt не хранит числа из in1 и in2. тебе нужно считать эти файлы через dataInputStream по очереди.
                 System.out.println(arr);
             } catch (IOException e) {
                 throw new RuntimeException(e);

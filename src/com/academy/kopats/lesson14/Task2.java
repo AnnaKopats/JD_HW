@@ -22,8 +22,7 @@ public class Task2 {
                 new BufferedOutputStream(
                         new FileOutputStream(fullPathIn1)))) {
             for (int i = 0; i < num.length; i++) {
-                num[i] = random.nextInt(100000);
-                dos1.write((num[i] + " ").getBytes());
+                dos1.writeInt(random.nextInt(100000));
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -32,28 +31,28 @@ public class Task2 {
                 new BufferedOutputStream(
                         new FileOutputStream(fullPathIn2)))) {
             for (int i = 0; i < num.length; i++) {
-                num[i] = random.nextInt(100000);
-                dos2.write((num[i] + " ").getBytes());
+                dos2.writeInt(random.nextInt(100000));
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
         ArrayList<Integer> arr = new ArrayList<>();
-
-        try (DataOutputStream dos = new DataOutputStream
-                (new BufferedOutputStream
-                        (new FileOutputStream(fullPathOut)))) {
-            try (SequenceInputStream sis = new SequenceInputStream
-                    (new FileInputStream(fullPathIn1), new FileInputStream(fullPathIn2))) {
-                int i = 0;
-                while ((i = sis.read()) != -1) {
-                    arr.add(i);
+        try (DataInputStream dis1 = new DataInputStream(new BufferedInputStream(new FileInputStream(fullPathIn1)))) {
+                while (dis1.available()>0) {
+                    arr.add(dis1.readInt());
                 }
-                Collections.sort(arr);
-                dos.write(arr.toString().getBytes());
-                System.out.println(arr);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
+                DataInputStream dis2 = new DataInputStream(new BufferedInputStream(new FileInputStream(fullPathIn2)));
+                while (dis2.available()>0) {
+                    arr.add(dis2.readInt());
+                }
+            Collections.sort(arr);
+           // System.out.print(arr);
+
+            DataOutputStream dos = new DataOutputStream
+                    (new BufferedOutputStream
+                            (new FileOutputStream(fullPathOut)));
+            for (Integer integer : arr) {
+                dos.write((integer + " ").getBytes());
             }
         } catch (IOException e) {
             throw new RuntimeException(e);

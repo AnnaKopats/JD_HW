@@ -7,7 +7,7 @@ public class Incrementer extends Thread {
         for (int i = 0; i < 500; i++) {
             Task3.value++;
 
-            while (!Thread.currentThread().isInterrupted()) { //прочитай внимательно. пока поток не прерван - выбрасывай исключение. наоборот прервать нужно каждый 10-ый
+            while (!Thread.currentThread().isInterrupted()) { //прочитай внимательно. ты выбрасываешь исключение во всех не прерваных потоках. наоборот прервать нужно каждый 10-ый
 
                 throw new RuntimeException("Возникло исключение" + Thread.currentThread().getName());
 

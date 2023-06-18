@@ -1,6 +1,6 @@
 package com.academy.kopats.lesson16;
 
-public class BankAccount {
+public class BankAccount { //программа не работает. Дедлок на потоках. Вобще задание расчитано просто на синхронизацию доступа к полю. Вовсе не обязательно делать wait-notify
     public static Double currentBalance = 300.00;
     public static final Double REPLENISHED = 100.00;
     public static final Double DEBITING_FUNDS = 200.00;

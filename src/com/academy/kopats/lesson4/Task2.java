@@ -8,14 +8,14 @@ public class Task2 {
         System.out.println("Введите два числа: ");
         int a = scanner.nextInt();
         int b = scanner.nextInt();
-        System.out.print("Наибольший общий делитель этих чисел равен: " + MaxDivisor(a, b));
+        System.out.print("Наибольший общий делитель этих чисел равен: " + maxDivisor(a, b));
     }
 
-    public static int MaxDivisor(int n, int m) {
+    public static int maxDivisor(int n, int m) {
         if (n == m) return n;
-        else if (n > m) return MaxDivisor(n - m, m);
+        else if (n > m) return maxDivisor(n - m, m);
         else
-            return MaxDivisor(n, m - n);
+            return maxDivisor(n, m - n);
     }
 }
 

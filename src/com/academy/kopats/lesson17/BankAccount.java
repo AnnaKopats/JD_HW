@@ -1,14 +1,14 @@
 package com.academy.kopats.lesson17;
 
 public class BankAccount{
-    private double currentBalance;
+    private double currentBalance; //нужен потокобезопасный класс. Попробуй AtomicInteger
 
     public BankAccount(Double currentBalance) {
         this.currentBalance = currentBalance;
     }
 
 
-    public synchronized void debitingFundsBalance(double amount) {
+    public synchronized void debitingFundsBalance(double amount) { //синхронизации надо убрать
         currentBalance -= amount;
         System.out.println("Списано: " + amount + ", текущий баланс: " + currentBalance);
     }

@@ -10,7 +10,7 @@ public class CallOld {
 
     public void call() {
         TestAnnotation t = new TestAnnotation();
-        @SuppressWarnings("AssertStatement")
+        @SuppressWarnings("AssertStatement") //@SuppressWarnings("deprecation") - эта аннотация подавит ворнинг
         String old = t.old();
         System.out.println(old);
     }

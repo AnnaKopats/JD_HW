@@ -1,7 +1,7 @@
 package com.academy.kopats.lesson17;
 
-import com.academy.kopats.lesson16.Buyer;
-import com.academy.kopats.lesson16.QueueContainer;
+import com.academy.kopats.lesson16.Buyer; // в задании 17 используются классы из 16-ого
+import com.academy.kopats.lesson16.QueueContainer;// в задании 17 используются классы из 16-ого
 
 import java.util.Map;
 
@@ -27,7 +27,7 @@ public class Cashier extends Thread {
         System.out.println(this.getName() + " завершил работу");
     }
 
-    private void printBill(Buyer buyer) {
+    private void printBill(Buyer buyer) { //доступ к методу никак не синхронизирован. потоки могут "врываться" в консоль и перебивать вывод  друг друга
         if (buyer == null) {
             return;
         }

@@ -7,8 +7,8 @@ import java.util.ArrayDeque;
 import java.util.Queue;
 
 public class QueueContainer {
-    private static final Queue<Buyer> queue = new ArrayDeque<>();
-    private static int counter = 0;
+    private static final Queue<Buyer> queue = new ArrayDeque<>(); //нужен потокобезопасный класс очереди
+    private static int counter = 0; //и потокобезопасный счетчик
 
     public static void addBuyer(Buyer buyer) {
             queue.add(buyer);

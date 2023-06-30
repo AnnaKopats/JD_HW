@@ -1,11 +1,11 @@
 package com.academy.kopats.lesson17;
 
-import com.academy.kopats.lesson16.Buyer;
-import com.academy.kopats.lesson16.QueueContainer;
-
 import java.util.Map;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class Cashier extends Thread {
+    private static final ReentrantLock reentrantLock = new ReentrantLock();
+
     public Cashier(int i) {
         super("Cashier N" + i);
     }
@@ -14,23 +14,21 @@ public class Cashier extends Thread {
     public void run() {
         while (QueueContainer.isServiceNeeded()) {
             Buyer buyer = QueueContainer.removeBuyer();
-
             try {
                 sleep(100);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-
             printBill(buyer);
             QueueContainer.incrementCounter();
         }
         System.out.println(this.getName() + " завершил работу");
     }
-
     private void printBill(Buyer buyer) {
         if (buyer == null) {
             return;
         }
+        reentrantLock.lock();
         Map<String, Integer> bucket = buyer.getBucket();
         System.out.println("--------------------------------------");
         System.out.println(this.getName() + " обслуживает " + buyer.getName());
@@ -41,6 +39,6 @@ public class Cashier extends Thread {
         }
         System.out.println("Итого сумма: " + sum);
         System.out.println("--------------------------------------");
+        reentrantLock.unlock();
     }
-
 }

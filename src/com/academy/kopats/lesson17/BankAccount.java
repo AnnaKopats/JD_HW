@@ -1,21 +1,22 @@
 package com.academy.kopats.lesson17;
 
-public class BankAccount{
-    private double currentBalance;
+import java.util.concurrent.atomic.AtomicInteger;
 
-    public BankAccount(Double currentBalance) {
+public class BankAccount {
+    private AtomicInteger currentBalance;
+    public BankAccount(AtomicInteger currentBalance) {
         this.currentBalance = currentBalance;
     }
 
-
-    public synchronized void debitingFundsBalance(double amount) {
-        currentBalance -= amount;
+    public void debitingFundsBalance(int amount) {
+        for (int i = 0; i < 200; i++) {
+            currentBalance.decrementAndGet();
+        }
         System.out.println("Списано: " + amount + ", текущий баланс: " + currentBalance);
     }
 
-
-    public synchronized void replenishedBalance(double amount) {
-        currentBalance += amount;
+    public void replenishedBalance(int amount) {
+        currentBalance.addAndGet(amount);
         System.out.println("Зачислено: " + amount + ", текущий баланс: " + currentBalance);
     }
 

@@ -1,93 +1,85 @@
 package com.academy.kopats.lesson5;
 
-import java.util.Arrays;
 import java.util.Random;
 
 public class Matrix {
     private int[][] matrix;
 
-    public Matrix() {
 
-    }
-
-    public Matrix(int i, int j) {
-        this.matrix = new int [i][j];
-        for (i = 0; i < matrix.length; i++) {
-            for (j = 0; j < matrix[i].length; j++) {
-                matrix[i][j] = (int) (Math.random() * 21 - 10);
+    public Matrix(int n, int m) {
+        this.matrix = new int[n][m];
+        Random random = new Random();
+        for (n = 0; n < matrix.length; n++) {
+            for (m = 0; m < matrix[n].length; m++) {
+                this.matrix[n][m] = random.nextInt(-10, 10);
             }
-
         }
-      /*  i = matrix.length;
-        j = matrix[0].length;
-        for (i = 0; i < matrix.length(); ++i) {
-            for (int j = 0; j < matrix.getColumnsNum(); ++j) {
-                matrix.setElement(i, j, (int) (Math.random() * 10));
-            }
-        }*/
     }
 
     public int[][] getMatrix() {
-        return this.matrix;
+        return matrix;
     }
 
     public void setMatrix(int[][] matrix) {
         this.matrix = matrix;
     }
-    public void setElement(int row, int column, int value) {
-        checkArgumentsIsLegal(row, column);
-        matrix[row][column] = value;
-    }
 
-    public int getElement(int row, int column) {
-        checkArgumentsIsLegal(row, column);
-        return matrix[row][column];
-    }
-
-    public int getRowsNum() {
-        return matrix.length;
-    }
-    // jkjnk
-    public int getColumnsNum() {
-        return matrix[0].length;
-    }
-
-    private void checkArgumentsIsLegal(int row, int column) {
-        if (row < 0 || row >= getRowsNum()) {
-            throw new IllegalArgumentException("Illegal row index");
+    public  Matrix add(Matrix a) {
+        Matrix matrix1 = new Matrix(a.matrix.length, matrix.length);
+        if (a.matrix == null || a.matrix.length == 0 || a.matrix[0] == null || a.matrix[0].length == 0) {
+            System.out.println("Ошибка! Матрица не может быть null");
         }
-
-        if (column < 0 || column >= getColumnsNum()) {
-            throw new IllegalArgumentException("Illegal column index");
+        if (matrix == null || matrix.length == 0 || matrix[0] == null || matrix[0].length == 0) {
+            System.out.println("Ошибка! Матрица не может быть null");
         }
-    }
-
-    public Matrix multiply(Matrix multiplier) {
-        int thisRows = getRowsNum();
-        int thisCols = getColumnsNum();
-
-        int otherRows = multiplier.getRowsNum();
-        int otherCols = multiplier.getColumnsNum();
-        int value = 0;
-        if (thisCols != otherCols) {
-            throw new IllegalArgumentException("...here could be your ad...");
-        }
-        Matrix result = new Matrix(thisRows, otherCols);
-
-        for (int thisRow = 0; thisRow < thisRows; ++thisRow) {
-            for (int otherCol = 0; otherCol < otherCols; ++otherCol) {
-
-                for (int thisCol = 0; thisCol < thisCols; ++thisCol) {
-                    for (int otherRow = 0; otherRow < otherRows; ++otherRow) {
-                        value = matrix[thisRow][thisCol] * multiplier.getElement(otherRow, otherCol);
-                    }
+        if (a.matrix.length != matrix.length || a.matrix[0].length != matrix[0].length) {
+            System.out.println("Ошибка! Матрицы не равны!");
+        } else {
+            for (int i = 0; i < matrix1.matrix.length; i++) {
+                for (int j = 0; j < matrix1.matrix[i].length; j++) {
+                    matrix1.matrix[i][j] = a.matrix[i][j] + matrix[i][j];
                 }
-                if ((value >>> 32) > 0) {
-                    System.out.println("Integer overflow while multiplying matrixes.");
-                }
-                result.setElement(thisRow, otherCol, value);
             }
         }
-        return result;
+        return matrix1;
+    }
+
+    public Matrix subtract(Matrix a) {
+        Matrix matrix1 = new Matrix(a.matrix.length, matrix.length);
+        if (a.matrix == null || a.matrix.length == 0 || a.matrix[0] == null || a.matrix[0].length == 0) {
+            System.out.println("Ошибка! Матрица не может быть null");
+        }
+        if (matrix == null || matrix.length == 0 || matrix[0] == null || matrix[0].length == 0) {
+            System.out.println("Ошибка! Матрица не может быть null");
+        }
+        if (a.matrix.length != matrix.length || a.matrix[0].length != matrix[0].length) {
+            System.out.println("Ошибка! Матрицы не равны!");
+        }else {
+            for (int i = 0; i < matrix1.matrix.length; i++) {
+                for (int j = 0; j < matrix1.matrix[i].length; j++) {
+                    matrix1.matrix[i][j] = a.matrix[i][j] - matrix[i][j];
+                }
+            }
+        }
+        return matrix1;
+    }
+    public Matrix multiply(Matrix a){
+        Matrix matrix1 = new Matrix(a.matrix.length, matrix.length);
+        if (a.matrix == null || a.matrix.length == 0 || a.matrix[0] == null || a.matrix[0].length == 0) {
+            System.out.println("Ошибка! Матрица не может быть null");
+        }
+        if (matrix == null || matrix.length == 0 || matrix[0] == null || matrix[0].length == 0) {
+            System.out.println("Ошибка! Матрица не может быть null");
+        }
+        if (a.matrix.length != matrix.length || a.matrix[0].length != matrix[0].length) {
+            System.out.println("Ошибка! Матрицы не равны!");
+        }else {
+            for (int i = 0; i < matrix1.matrix.length; i++) {
+                for (int j = 0; j < matrix1.matrix[i].length; j++) {
+                    matrix1.matrix[i][j] = a.matrix[i][j] * matrix[i][j];
+                }
+            }
+        }
+        return matrix1;
     }
 }

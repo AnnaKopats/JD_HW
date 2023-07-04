@@ -11,7 +11,7 @@ public class Notepad {
     public Notepad() {
     }
 
-    public Notepad(String date) {
+    public Notepad(String date) {  //конструктор описан, но нигде и ни откуда не вызывается
         SimpleDateFormat format = new SimpleDateFormat();
         format.applyPattern("dd-MM-yyyy");
         try {

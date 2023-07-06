@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 public class Task6 {
     //(\W|^)[\w.\-]{0,25}@(yahoo|hotmail|gmail)\.com(\W|$)
     public static void main(String[] args) {
-        printEmail("If you were able to connectthena-win@gmail.com will appear in front of you to enter your login and password annakopats@mail.ru");
+        printEmail("If you were able to connectthena-win@gmail.com will appear in front vale{}ry.borys@gmail.com f you to enter your login and password annakopats@mail.ru");
     }
 
     public static void printEmail(String s) {
@@ -18,3 +18,7 @@ public class Task6 {
         }
     }
 }
+
+/*
+vale{}ry.borys@gmail.com находит не верно. фигурные скобки и не только - валидные символы по заданию
+ */

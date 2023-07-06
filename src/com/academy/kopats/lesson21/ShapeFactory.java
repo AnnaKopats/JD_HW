@@ -11,7 +11,7 @@ public class ShapeFactory {
         int i = sc.nextInt();
         Shape shape = null;
         System.out.println("Введите параметры фигуры: ");
-        if (i == 1) {
+        if (i == 1) { //вцелом окей, но делегируй логику запроса данных самим фигурам.
             a = sc.nextInt();
             b = sc.nextInt();
             c = sc.nextInt();

@@ -1,32 +1,46 @@
 package com.academy.kopats.lesson21;
 
-import com.academy.kopats.lesson20.Product;
+import java.util.Scanner;
 
 public class Triangle implements Shape {
-    private double a;
-    private double b;
-    private double c;
+    private int a;
+    private int b;
+    private int c;
     private String name;
 
-    public Triangle(double a, double b, double c, String name) {
+    public Triangle(int a, int b, int c, String name) {
         this.a = a;
         this.b = b;
         this.c = c;
         this.name = name;
     }
 
+
+    @Override
+    public Shape requestParamShape() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введите параметры фигуры: ");
+        a = sc.nextInt();
+        b = sc.nextInt();
+        c = sc.nextInt();
+        name = sc.nextLine();
+        return new Triangle(a, b, c, name);
+    }
+
     @Override
     public double getArea() {
-        double p = (a + b + c) / 2;
+        int sum = a + b + c;
+        double p = sum / 2.0;
         System.out.println("Площадь треугольника равна: ");
         return p * (p - a) * (p - b) * (p - c);
     }
+
 
     public double getA() {
         return a;
     }
 
-    public void setA(double a) {
+    public void setA(int a) {
         this.a = a;
     }
 
@@ -34,7 +48,7 @@ public class Triangle implements Shape {
         return b;
     }
 
-    public void setB(double b) {
+    public void setB(int b) {
         this.b = b;
     }
 
@@ -42,7 +56,7 @@ public class Triangle implements Shape {
         return c;
     }
 
-    public void setC(double c) {
+    public void setC(int c) {
         this.c = c;
     }
 

@@ -1,6 +1,8 @@
 package com.academy.kopats.lesson21;
 
-public class Square implements Shape{
+import java.util.Scanner;
+
+public class Square implements Shape {
     private double a;
     private String name;
 
@@ -12,7 +14,15 @@ public class Square implements Shape{
     @Override
     public double getArea() {
         System.out.println("Площадь квадрата равна: ");
-        return a*a;
+        return a * a;
+    }
+
+    public Shape requestParamShape() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введите параметры фигуры: ");
+        a = sc.nextInt();
+        name = sc.nextLine();
+        return new Square(a, name);
     }
 
     public double getA() {

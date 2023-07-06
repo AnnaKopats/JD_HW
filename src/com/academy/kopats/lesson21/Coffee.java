@@ -4,5 +4,6 @@ public class Coffee implements Drinks{
     @Override
     public void prepare() {
         System.out.println("Готовится кофе");
+
     }
 }

@@ -1,6 +1,8 @@
 package com.academy.kopats.lesson21;
 
-public class Circle implements Shape{
+import java.util.Scanner;
+
+public class Circle implements Shape {
     private double r;
     private String name;
 
@@ -10,9 +12,18 @@ public class Circle implements Shape{
     }
 
     @Override
+    public Shape requestParamShape() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введите параметры фигуры: ");
+        r = sc.nextInt();
+        name = sc.nextLine();
+        return new Circle(r, name);
+    }
+
+    @Override
     public double getArea() {
         System.out.println("Площадь круга равна: ");
-        return Math.PI*r*r;
+        return Math.PI * r * r;
     }
 
     public double getR() {

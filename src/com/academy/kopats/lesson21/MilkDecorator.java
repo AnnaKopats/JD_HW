@@ -1,12 +1,12 @@
 package com.academy.kopats.lesson21;
 
 public class MilkDecorator extends Decorator {
-    public MilkDecorator(Drinks component) {
-        super(component);
+
+    public MilkDecorator() {
     }
 
     @Override
     public void addIngredients() {
-        System.out.println(" с молоком");
+        System.out.println("Добавлено молоко");
     }
 }

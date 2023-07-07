@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class StudentListTest {
     Student student1 = new Student(102261, "Миронов Андрей Иванович", "Информатика", 5, "IT-12", 2004);
@@ -26,5 +27,9 @@ public class StudentListTest {
         list.add(student1.getFullName());
         list.add(student3.getFullName());
         assertEquals(list, studentLists.getYear(students,2003));
+    }
+    @Test
+    public void getCourseThrowTest() {
+        assertThrows(IndexOutOfBoundsException.class,()-> studentLists.getCourse(students, 6));
     }
 }

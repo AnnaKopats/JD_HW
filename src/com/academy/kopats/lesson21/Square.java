@@ -22,7 +22,7 @@ public class Square implements Shape {
         System.out.println("Введите параметры фигуры: ");
         a = sc.nextInt();
         name = sc.nextLine();
-        return new Square(a, name);
+        return new Square(a, name); //то же что и для круга и всех остальных фигур
     }
 
     public double getA() {

@@ -1,27 +1,34 @@
 package com.academy.kopats.lesson5;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class StudentLists {
 
 
-    public void getCourse(Student[] students, int course) {
-        if (course <= 1 || course >= 5) {
-            System.out.println("Нет такого курса");
+    public List<String> getCourse(Student[] students, int course) {
+        if (course < 1 || course > 5) {
+            throw new IndexOutOfBoundsException("Нет такого курса");
         }
+        List<String> list = new ArrayList<>();
         for (int i = 0; i < students.length; i++) {
             if (students[i].getCourse() == course) {
-                System.out.println(students[i].getFullName() + " " + students[i].getCourse() + " курс");
+
+               list.add(students[i].getFullName());
+               // System.out.println(students[i].getFullName() + " " + students[i].getCourse() + " курс");
             }
         }
+        return list;
     }
 
-    public void getYear(Student[] students, int year) {
+    public List<String> getYear(Student[] students, int year) {
+        List<String> list = new ArrayList<>();
         for (int i = 0; i < students.length; i++) {
             if (students[i].getYearBirth() > year) {
-                System.out.println(students[i].getFullName() + " " + students[i].getYearBirth() + " г.р.");
+               list.add(students[i].getFullName());
+                // System.out.println(students[i].getFullName() + " " + students[i].getYearBirth() + " г.р.");
             }
         }
+        return list;
     }
 
 }

@@ -22,14 +22,12 @@ public class Task3 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите год:");
         int year = scanner.nextInt();
-        System.out.println("Список студентов после " + year + " года рождения:");
-        studentLists.getYear(student, year);
+        System.out.println("Список студентов после " + year + " года рождения:" + "\n" + studentLists.getYear(student, year));
         System.out.println();
 
         System.out.println("Введите номер курса:");
         int course = scanner.nextInt();
-        System.out.println("Список студентов " + course + " курса:");
-        studentLists.getCourse(student, course);
+        System.out.println("Список студентов " + course + " курса:" + "\n" + studentLists.getCourse(student, course));
 
     }
 }

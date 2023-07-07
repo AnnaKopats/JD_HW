@@ -60,7 +60,7 @@ public class Student {
 
     public void setCourse(int course) {
         if (course < 1 || course > 5) {
-            System.out.println("Нет такого курса");
+            throw new IndexOutOfBoundsException("Нет такого курса");
         } else {
             this.course = course;
         }

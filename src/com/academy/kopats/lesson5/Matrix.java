@@ -27,13 +27,13 @@ public class Matrix {
     public  Matrix add(Matrix a) {
         Matrix matrix1 = new Matrix(a.matrix.length, matrix.length);
         if (a.matrix == null || a.matrix.length == 0 || a.matrix[0] == null || a.matrix[0].length == 0) {
-            System.out.println("Ошибка! Матрица не может быть null");
+            throw new ArrayIndexOutOfBoundsException("Ошибка! Матрица не может быть null");
         }
         if (matrix == null || matrix.length == 0 || matrix[0] == null || matrix[0].length == 0) {
-            System.out.println("Ошибка! Матрица не может быть null");
+            throw new ArrayIndexOutOfBoundsException("Ошибка! Матрица не может быть null");
         }
         if (a.matrix.length != matrix.length || a.matrix[0].length != matrix[0].length) {
-            System.out.println("Ошибка! Матрицы не равны!");
+            throw new UnsupportedOperationException("Ошибка! Матрицы не равны!");
         } else {
             for (int i = 0; i < matrix1.matrix.length; i++) {
                 for (int j = 0; j < matrix1.matrix[i].length; j++) {
@@ -47,13 +47,13 @@ public class Matrix {
     public Matrix subtract(Matrix a) {
         Matrix matrix1 = new Matrix(a.matrix.length, matrix.length);
         if (a.matrix == null || a.matrix.length == 0 || a.matrix[0] == null || a.matrix[0].length == 0) {
-            System.out.println("Ошибка! Матрица не может быть null");
+            throw new ArrayIndexOutOfBoundsException("Ошибка! Матрица не может быть null");
         }
         if (matrix == null || matrix.length == 0 || matrix[0] == null || matrix[0].length == 0) {
-            System.out.println("Ошибка! Матрица не может быть null");
+            throw new ArrayIndexOutOfBoundsException("Ошибка! Матрица не может быть null");
         }
         if (a.matrix.length != matrix.length || a.matrix[0].length != matrix[0].length) {
-            System.out.println("Ошибка! Матрицы не равны!");
+            throw new UnsupportedOperationException("Ошибка! Матрицы не равны!");
         }else {
             for (int i = 0; i < matrix1.matrix.length; i++) {
                 for (int j = 0; j < matrix1.matrix[i].length; j++) {
@@ -66,13 +66,13 @@ public class Matrix {
     public Matrix multiply(Matrix a){
         Matrix matrix1 = new Matrix(a.matrix.length, matrix.length);
         if (a.matrix == null || a.matrix.length == 0 || a.matrix[0] == null || a.matrix[0].length == 0) {
-            System.out.println("Ошибка! Матрица не может быть null");
+            throw new ArrayIndexOutOfBoundsException("Ошибка! Матрица не может быть null");
         }
         if (matrix == null || matrix.length == 0 || matrix[0] == null || matrix[0].length == 0) {
-            System.out.println("Ошибка! Матрица не может быть null");
+            throw new ArrayIndexOutOfBoundsException("Ошибка! Матрица не может быть null");
         }
         if (a.matrix.length != matrix.length || a.matrix[0].length != matrix[0].length) {
-            System.out.println("Ошибка! Матрицы не равны!");
+            throw new UnsupportedOperationException("Ошибка! Матрицы не равны!");
         }else {
             for (int i = 0; i < matrix1.matrix.length; i++) {
                 for (int j = 0; j < matrix1.matrix[i].length; j++) {
@@ -82,4 +82,5 @@ public class Matrix {
         }
         return matrix1;
     }
+
 }

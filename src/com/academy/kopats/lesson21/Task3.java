@@ -22,7 +22,7 @@ public class Task3 {
             System.out.println("Сахар, молоко, сироп? По завершении выбора введите стоп.");
             s = sc.nextLine();
             if (s.equals("сахар")) {
-                new SugarDecorator().addIngredients();
+                new SugarDecorator().addIngredients(); //декоратор должен не метод вызывать, а в конструктор принимать объект. разберись как работает паттерн
             } else if (s.equals("молоко")) {
                 new MilkDecorator().addIngredients();
             } else if (s.equals("сироп")) {

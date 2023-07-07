@@ -17,7 +17,7 @@ public class Circle implements Shape {
         System.out.println("Введите параметры фигуры: ");
         r = sc.nextInt();
         name = sc.nextLine();
-        return new Circle(r, name);
+        return new Circle(r, name); //фабрика уже вернула объект нужного класса. зачем создавать новый? можно засетать параметры и вернуть this
     }
 
     @Override

@@ -13,14 +13,12 @@ public class Task3 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Какой напиток желаете приготовить? \n Введите: кофе или чай");
         String s = sc.nextLine();
-
-        Drinks coffee;
-        Drinks tea;
+        Drinks drinks = null;
 
         if (s.equals("кофе")) {
-            coffee = new Coffee();
+            drinks = new Coffee();
         } else if (s.equals("чай")) {
-            tea = new Tea();
+            drinks = new Tea();
         }
         System.out.println("Что желаете добавить в напиток? ");
         boolean equals = false;
@@ -28,14 +26,11 @@ public class Task3 {
             System.out.println("Сахар, молоко, сироп? По завершении выбора введите стоп.");
             s = sc.nextLine();
             if (s.equals("сахар")) {
-                coffee = new SugarDecorator(new Coffee());
-                tea = new SugarDecorator(new Tea());
+                drinks = new SugarDecorator(drinks);
             } else if (s.equals("молоко")) {
-                coffee = new MilkDecorator(new Coffee());
-                tea = new MilkDecorator(new Tea());
+                drinks = new MilkDecorator(drinks);
             } else if (s.equals("сироп")) {
-                coffee = new SyrupDecorator(new Coffee());
-                tea = new SugarDecorator(new Tea());
+                drinks = new SyrupDecorator(drinks);
             }
             equals = s.equals("стоп");
         } while (!equals);

@@ -4,6 +4,7 @@ public class MilkDecorator extends Decorator {
 
     public MilkDecorator(Drinks drinks) {
         super(drinks);
+        addIngredients();
     }
 
     @Override

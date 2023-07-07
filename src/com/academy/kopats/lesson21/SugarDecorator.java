@@ -4,7 +4,7 @@ public class SugarDecorator extends Decorator {
 
     public SugarDecorator(Drinks drinks) {
         super(drinks);
-
+addIngredients();
     }
 
     @Override

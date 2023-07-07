@@ -17,7 +17,9 @@ public class Circle implements Shape {
         System.out.println("Введите параметры фигуры: ");
         r = sc.nextInt();
         name = sc.nextLine();
-        return new Circle(r, name);
+        setR(r);
+        setName(name);
+        return this;
     }
 
     @Override

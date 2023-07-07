@@ -26,7 +26,10 @@ public class Rectangle implements Shape {
         a = sc.nextInt();
         b = sc.nextInt();
         name = sc.nextLine();
-        return new Rectangle(a, b, name);
+        setA(a);
+        setB(b);
+        setName(name);
+        return this;
     }
 
     public double getA() {

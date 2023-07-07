@@ -24,7 +24,11 @@ public class Triangle implements Shape {
         b = sc.nextInt();
         c = sc.nextInt();
         name = sc.nextLine();
-        return new Triangle(a, b, c, name);
+        setA(a);
+        setB(b);
+        setC(c);
+        setName(name);
+        return this;
     }
 
     @Override

@@ -1,7 +1,8 @@
 package com.academy.kopats.lesson21;
 
 public class SyrupDecorator extends Decorator{
-    public SyrupDecorator() {
+    public SyrupDecorator(Drinks drinks) {
+        super(drinks);
     }
 
 

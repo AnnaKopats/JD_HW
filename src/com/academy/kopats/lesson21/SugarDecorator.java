@@ -1,9 +1,9 @@
 package com.academy.kopats.lesson21;
 
-public class SugarDecorator extends Decorator{
+public class SugarDecorator extends Decorator {
 
-    public SugarDecorator() {
-        super();
+    public SugarDecorator(Drinks drinks) {
+        super(drinks);
 
     }
 

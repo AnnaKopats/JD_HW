@@ -16,7 +16,7 @@ public class MatrixTest {
     public void addTest() {
         for (int i = 0; i < matrix1.length; i++) {
             for (int j = 0; j < matrix2.length; j++) {
-                matrixNew[i][j] = matrix1[i][j] + matrix2[i][j];
+                matrixNew[i][j] = matrix1[i][j] + matrix2[i][j]; //а где тестирование метода класса Matrix?
             }
         }
         int[][] matrixExpected = {{5,9},{5,5}};
@@ -27,7 +27,7 @@ public class MatrixTest {
     public void subtractTest(){
         for (int i = 0; i < matrix1.length; i++) {
             for (int j = 0; j < matrix2.length; j++) {
-                matrixNew[i][j] = matrix1[i][j] - matrix2[i][j];
+                matrixNew[i][j] = matrix1[i][j] - matrix2[i][j];  //а где тестирование метода класса Matrix?
             }
         }
         int[][] matrixExpected = {{1,1},{3,-1}};
@@ -37,7 +37,7 @@ public class MatrixTest {
     public void multiplyTest(){
         for (int i = 0; i < matrix1.length; i++) {
             for (int j = 0; j < matrix2.length; j++) {
-                matrixNew[i][j] = matrix1[i][j] * matrix2[i][j];
+                matrixNew[i][j] = matrix1[i][j] * matrix2[i][j]; //а где тестирование метода класса Matrix?
             }
         }
         int[][] matrixExpected = {{6,20},{4,6}};
